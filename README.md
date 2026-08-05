@@ -105,13 +105,6 @@ Place images in the `public/` folder and update file paths in the data files.
 3. Set environment variables in Vercel settings.
 4. Deploy.
 
-### Docker
-
-```powershell
-docker build -t developer-portfolio:prod -f Dockerfile.prod .
-docker run -d -p 3000:3000 --name portfolio developer-portfolio:prod
-```
-
 ## Notes
 
 - Keep `.gitignore` as-is to avoid committing build output and dependencies.
