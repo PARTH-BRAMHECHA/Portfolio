@@ -4,6 +4,7 @@ module.exports = {
   turbopack: {
     root: __dirname,
   },
+  allowedDevOrigins: ['192.168.1.4'],
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

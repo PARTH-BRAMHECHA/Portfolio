@@ -46,13 +46,13 @@ function Skills() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10">
+                  <div className="relative w-10 h-10 sm:w-12 sm:h-12">
                     <Image
-                      src={skillsImage(skill)?.src}
+                      src={skillsImage(skill)}
                       alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg"
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className="rounded-lg"
                     />
                   </div>
                   <p className="text-white text-sm sm:text-lg">
