@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: "project-a",
+    category: "applied",
     title: "Yield Vision",
     image: "/project/yv.png",
     shortDescription:
@@ -9,13 +10,14 @@ export const projects = [
       "YieldVision leverages machine learning, satellite imagery, and modern web technology to help farmers and stakeholders make smarter agricultural decisions. The platform offers accurate crop yield predictions, real-time crop health monitoring, crop recommendation insights, weather forecasts, and access to government schemes. Built by Team TechHarvesters, it combines React, Node.js, Express, Python, FastAPI, Streamlit, MongoDB, and Google Drive integration to deliver an intelligent and user-friendly precision farming experience. It also supports multilingual access in English and Hindi and includes secure authentication, downloadable reports, and interactive dashboards.",
     tools: ["React", "Node.js", "Express", "Python", "FastAPI", "Streamlit", "MongoDB", "Socket.IO", "Google Drive API"],
     Sponsor:"Rotten Grapes Pvt. Ltd.",
-    sponsorshipCertificate: "/Project Sponsorship/Yield Vission sponsorship.pdf",
+    sponsorshipCertificateLink: "/Project Sponsorship/Yield Vission sponsorship.pdf",
     github: "https://github.com/ShreyashIngle/YieldVision",
     demoVideo: "https://www.youtube.com/watch?v=_ZcWCp_xLI4",
     blogLink: "https://medium.com/@parth.bramhecha007/intelligent-farming-with-ai-making-smarter-predictions-through-satellite-images-b891a78a837f",
   },
   {
     id: "project-b",
+    category: "applied",
     title: "Prep Genius",
     image: "/project/prepgenius.jpg",
     shortDescription:
@@ -23,13 +25,14 @@ export const projects = [
     longDescription:
       "PrepGenius is a comprehensive career preparation platform designed to support students, recent graduates, and professionals in their job search journey. It offers AI-driven resume analysis, ATS scoring, technical MCQ generation, interview bot practice, and YouTube-based learning resources to help users strengthen their skills and improve their chances of landing the right opportunities. Built with modern technologies such as FastAPI, Node.js, MongoDB, and Google Gemini AI, PrepGenius delivers a smart, personalized, and efficient experience for career growth.",
     tools: ["FastAPI", "Node.js", "Express", "MongoDB", "Google Gemini AI", "JWT", "PyPDF2", "Pydantic"],
-    Sponsor:"Pict IT Department",
-    sponsorshipCertificate: "/Project Sponsorship/Prepgenius_sponsorship.pdf",
+    Sponsor:"",
+    sponsorshipCertificateLink: "/Project Sponsorship/Prepgenius_sponsorship.pdf",
     github: "https://github.com/SmitDeshmukh16/PrepGenius",
     demoVideo: "https://www.youtube.com/watch?v=Y-q9jTLiRuo",
   },
 {
     id: "project-c",
+    category: "applied",
     title: "Diabetic Retinopathy Detection",
     image: "/project/DR.jpeg",
     shortDescription:
@@ -38,7 +41,7 @@ export const projects = [
       "This project focuses on revolutionizing diabetic retinopathy screening through deep learning. It compares multiple architectures, including a custom CNN, ResNet50 with attention, Vision Transformer, and DenseNet121, to detect diabetic retinopathy from retinal fundus images. The model pipeline includes image preprocessing, augmentation, class imbalance handling using SMOTE, and training with weighted cross-entropy. DenseNet121 achieved strong performance with 91% validation accuracy and a kappa score of 0.7902, showing the potential of AI to assist clinicians in early diagnosis and reduce preventable vision loss. The work emphasizes explainability, robust medical imaging workflows, and future deployment for scalable screening in underserved communities.",
     tools: ["Python", "TensorFlow", "Keras", "PyTorch", "OpenCV", "NumPy", "Pandas", "Matplotlib", "SMOTE", "DenseNet121"],
     Sponsor:"Vardhaman Eye Hosptipal",
-    sponsorshipCertificate: "/Project Sponsorship/DRdetector_ Sponsorship.pdf",
+    sponsorshipCertificateLink: "/Project Sponsorship/DRdetector_ Sponsorship.pdf",
     github: "https://github.com/PARTH-BRAMHECHA/diabetic-retinopathy",
     demoVideo: "",
     deployedLink: "https://dr-detector.vercel.app/",
@@ -47,6 +50,7 @@ export const projects = [
 
  {
     id: "project-d",
+    category: "applied",
     title: "OCR-ID-Card-Reader",
     image: "/project/ocr.jpg",
     shortDescription:
@@ -60,6 +64,7 @@ export const projects = [
   },
   {
     id: "project-e",
+    category: "applied",
     title: "Multi-Intent AI Travel Assistant",
     image: "/project/AI-Travel-assist.png",
     shortDescription:
@@ -69,6 +74,20 @@ export const projects = [
     tools: ["Python", "LangGraph", "Groq", "FastAPI", "Redis", "LTA DataMall", "Data.gov.sg", "OpenAI-style LLM"],
     Sponsor:"",
     github: "https://github.com/PARTH-BRAMHECHA/AI-travel-Assistance",
+    demoVideo: "",
+  },
+  {
+    id: "project-devnagri-llm",
+    category: "applied",
+    title: "Devnagri_LLM",
+    image: "/project/devnagri-llm.png",
+    shortDescription:
+      "A multi-stage research pipeline for Devanagari-script LLM compression, using vocabulary extension and LoRA fine-tuning on Airavata to study compression-quality trade-offs for Indic language models.",
+    longDescription:
+      "Devnagri_LLM is an ongoing research project investigating how far Devanagari-script large language models can be compressed without losing fidelity. The pipeline vocabulary-extends and QLoRA fine-tunes Airavata-7B, then benchmarks compression against carefully isolated baselines (bits-per-character with variance reporting, ablations across fine-tuning stages, and LLM-generated-text conditions). Work has focused heavily on making the pipeline correct and reproducible on constrained hardware: fixing CUDA out-of-memory failures in the fine-tuning stage, resolving a baseline-isolation bug where the LoRA adapter was merging before the unfine-tuned baseline was recorded, and closing gaps in ablation coverage. The project targets a submission to an ACL/TALLIP-caliber NLP venue and runs on Kaggle T4 GPUs, using Hugging Face Transformers, PEFT, and torchao.",
+    tools: ["Python", "PyTorch", "Hugging Face Transformers", "PEFT / LoRA", "torchao", "Kaggle T4"],
+    Sponsor: "",
+    github: "https://github.com/PARTH-BRAMHECHA/Devnagri_LLM",
     demoVideo: "",
   },
 ];
