@@ -1,0 +1,182 @@
+@use "tailwindcss";
+
+:root {
+  --foreground-rgb: 215, 222, 229;
+  --term-bg: #090b0f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 215, 222, 229;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a313c #0e1218;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0e1218;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a313c;
+  border-radius: 0;
+  border: 2px solid #0e1218;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39d67b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: var(--term-bg);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background-image:
+    linear-gradient(rgba(57, 214, 123, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 214, 123, 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  background-position: center top;
+}
+
+::selection {
+  background: #39d67b;
+  color: #090b0f;
+}
+
+/* Blinking terminal cursor, used after prompts/headings */
+.term-cursor::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.35em;
+  background: #39d67b;
+  vertical-align: text-bottom;
+  animation: term-blink 1.1s steps(1) infinite;
+}
+
+@keyframes term-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Terminal window chrome: three dots */
+.term-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+.term-dots span {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+.term-dots span:nth-child(1) { background: #f0664f; }
+.term-dots span:nth-child(2) { background: #e8a94c; }
+.term-dots span:nth-child(3) { background: #39d67b; }
+
+/* Section title, styled like a shell comment */
+.term-section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "JetBrains Mono", monospace;
+  color: #7c8794;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+.term-section-title .term-hash {
+  color: #39d67b;
+}
+.term-section-title .term-value {
+  color: #d7dee5;
+  font-weight: 600;
+}
+
+/* Bracket-style CTA button */
+.term-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid #39d67b;
+  color: #39d67b;
+  background: rgba(57, 214, 123, 0.06);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.term-btn:hover {
+  background: #39d67b;
+  color: #090b0f;
+}
+.term-btn-ghost {
+  border-color: #2a313c;
+  color: #d7dee5;
+  background: transparent;
+}
+.term-btn-ghost:hover {
+  border-color: #5fd3ea;
+  color: #5fd3ea;
+  background: rgba(95, 211, 234, 0.08);
+}
+.term-btn-cyan {
+  border-color: #5fd3ea;
+  color: #5fd3ea;
+  background: rgba(95, 211, 234, 0.06);
+}
+.term-btn-cyan:hover {
+  background: #5fd3ea;
+  color: #090b0f;
+}
+.term-btn-amber {
+  border-color: #e8a94c;
+  color: #e8a94c;
+  background: rgba(232, 169, 76, 0.06);
+}
+.term-btn-amber:hover {
+  background: #e8a94c;
+  color: #090b0f;
+}
+
+/* Small tag / badge, like an inline code chip */
+.term-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(57, 214, 123, 0.35);
+  color: #39d67b;
+  background: rgba(57, 214, 123, 0.08);
+}
+
+#sticky-card-1 {
+  --index: 1;
+}
+
+#sticky-card-2 {
+  --index: 2;
+}
+
+#sticky-card-3 {
+  --index: 3;
+}
+
+#sticky-card-4 {
+  --index: 4;
+}
+
+.sticky-card {
+  top: calc(var(--index) * 4rem);
+}
