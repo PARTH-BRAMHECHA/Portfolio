@@ -47,7 +47,20 @@ export const projects = [
     deployedLink: "https://dr-detector.vercel.app/",
     blogLink: "https://medium.com/@parth.bramhecha007/revolutionizing-diabetic-retinopathy-screening-how-deep-learning-is-saving-sight-one-retina-at-a-212b6a2f3587",
   },
-
+  {
+    id: "project-e",
+    title: "Multi-Intent AI Travel Assistant",
+    image: "/project/AI-Travel-assist.png",
+    shortDescription:
+      "An agentic travel assistant for Singapore public transport that uses LangGraph, LLM intent extraction, and real-time transport context to answer travel-related queries.",
+    longDescription:
+      "This project implements an agentic workflow using LangGraph to answer user queries about Singapore's public transport. The assistant is context-aware and considers real-time weather, traffic incidents, peak-hour logic, and disruptions before generating a response. It uses a state-based graph architecture where an LLM extracts intent and entities, deterministic Python functions handle the transport API calls and time logic, and a final node synthesizes the data into a natural language answer. The design emphasizes modularity, easy debugging, and future expansion for production deployment through FastAPI, Redis caching, and async processing.",
+    tools: ["Python", "LangGraph", "Groq", "FastAPI", "Redis", "LTA DataMall", "Data.gov.sg", "OpenAI-style LLM"],
+    Sponsor:"",
+    github: "https://github.com/PARTH-BRAMHECHA/AI-travel-Assistance",
+    demoVideo: "",
+    deployedLink: "https://sgtravel-assistant.vercel.app/",
+  },
  {
     id: "project-d",
     category: "applied",
@@ -64,7 +77,6 @@ export const projects = [
   },
   {
     id: "project-e",
-    category: "applied",
     title: "Multi-Intent AI Travel Assistant",
     image: "/project/AI-Travel-assist.png",
     shortDescription:
@@ -74,20 +86,6 @@ export const projects = [
     tools: ["Python", "LangGraph", "Groq", "FastAPI", "Redis", "LTA DataMall", "Data.gov.sg", "OpenAI-style LLM"],
     Sponsor:"",
     github: "https://github.com/PARTH-BRAMHECHA/AI-travel-Assistance",
-    demoVideo: "",
-  },
-  {
-    id: "project-devnagri-llm",
-    category: "applied",
-    title: "Devnagri_LLM",
-    image: "/project/devnagri-llm.png",
-    shortDescription:
-      "A multi-stage research pipeline for Devanagari-script LLM compression, using vocabulary extension and LoRA fine-tuning on Airavata to study compression-quality trade-offs for Indic language models.",
-    longDescription:
-      "Devnagri_LLM is an ongoing research project investigating how far Devanagari-script large language models can be compressed without losing fidelity. The pipeline vocabulary-extends and QLoRA fine-tunes Airavata-7B, then benchmarks compression against carefully isolated baselines (bits-per-character with variance reporting, ablations across fine-tuning stages, and LLM-generated-text conditions). Work has focused heavily on making the pipeline correct and reproducible on constrained hardware: fixing CUDA out-of-memory failures in the fine-tuning stage, resolving a baseline-isolation bug where the LoRA adapter was merging before the unfine-tuned baseline was recorded, and closing gaps in ablation coverage. The project targets a submission to an ACL/TALLIP-caliber NLP venue and runs on Kaggle T4 GPUs, using Hugging Face Transformers, PEFT, and torchao.",
-    tools: ["Python", "PyTorch", "Hugging Face Transformers", "PEFT / LoRA", "torchao", "Kaggle T4"],
-    Sponsor: "",
-    github: "https://github.com/PARTH-BRAMHECHA/Devnagri_LLM",
     demoVideo: "",
   },
 ];
